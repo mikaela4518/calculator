@@ -1,0 +1,43 @@
+.cantainer {
+    width: 360px;
+    height: 450px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 139, 237);
+}
+
+#result {
+    margin:20px 10px;
+    border-radius: 5px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.show_operation {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+.show_operation >input{
+    margin:4px;
+    border-radius: 5px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 17px;
+    width: 28%;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons >button{
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    font-weight: bold;
+    font-size: 17px;
+}
