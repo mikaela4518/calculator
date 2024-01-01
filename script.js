@@ -17,6 +17,8 @@ function response(question) {
     // 7
     else if (question == "کی تو رو ساخته؟" || question == "چجوری ساخته شدی؟" || question == "صاحبت کیه؟") { answer = "نازنین من رو ساخته ، با js , html_css" }
 
+    else{answer="!نمیفهمم چی میگی" }
+
     return answer;
 }
 
