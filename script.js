@@ -1,48 +1,28 @@
-//stp1= meghdar 1 ro az karbar begir , be number tabdil kon , zakhire kon
-let value1 = Number(prompt("عدد اول را وارد کنید : "))
 
-//stp2= oparation ro az karbar begir va zakhire kon
-let oparation = prompt("عملگر مورد نظر را وارد کنید : ")
+function response(question) {
 
-//stp3= meghdar 2 ro az karbar begir , be number tabdil kon , zakhire kon
-let value2 = Number(prompt("عدد دوم را وارد کنید : "))
+    let answer = "";
 
-//stp4= natije ro zakhire kon
-let result = 0;
+    if (question == "سلام") { answer = "سلام" }
+    // 2
+    else if (question == "سلام خوبی؟" || question == "سلام چطوری؟" || question == "خوبی؟") { answer = "😊 سلام مرسی تو خوبی؟" }
+    // 3
+    else if (question == "میتونی حرف بزنی؟" || question == "بلدی حرف بزنی؟") { answer = "😒 فعلا که دارم حرف میزنم!" }
+    // 4
+    else if (question == "اسمت چیه؟") { answer = "به تو چه" }
+    // 5
+    else if (question == "چه خبر؟") { answer = "😊 خبرای خوووووب" }
+    // 6
+    else if (question == "مثلا؟" || question == "مثلا چه خبری؟" || question == "چه خبری؟") { answer = "😁 چی خوب تر از سلامتی " }
+    // 7
+    else if (question == "کی تو رو ساخته؟" || question == "چجوری ساخته شدی؟" || question == "صاحبت کیه؟") { answer = "نازنین من رو ساخته ، با js , html_css" }
 
-// stp5= oparation ro ba ( +,-,/,*,% ) moghayese kon va hamon ro anjam bede
-if (oparation == "+") {
-
-    result = value1 + value2;
-    alert(result)
-
-}
-else if (oparation == "-") {
-
-    result = value1 - value2;
-    alert(result)
-
-}
-else if (oparation == "/") {
-
-    result = value1 / value2;
-    alert(result)
-
-}
-else if (oparation == "*") {
-
-    result = value1 * value2;
-    alert(result)
-
-}
-else if (oparation == "%") {
-
-    result = value1 % value2;
-    alert(result)
-
-}
-else {
-    alert(" عملیات خواسته شده قابل انجام نمی باشد.لطفا از یکی از عملگر های       ( + , - , / , * , % ) استفاده کنید.")
+    return answer;
 }
 
-
+function show_response() {
+    let question = document.getElementById("Question").value;
+    let text1 = document.getElementById("msg1").innerHTML = question;
+    let text2 = document.getElementById("msg2").innerHTML = response(question);
+    document.getElementById("Question").value = "";
+}
