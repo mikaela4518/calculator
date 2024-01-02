@@ -5,19 +5,25 @@ body {
 }
 
 .cantainer {
-    width: 550px;
+    width: 40%;
     height: 100vh;
     margin: auto;
     background-image: url(img/back.webp);
     background-repeat: no-repeat;
-background-size: cover;
-    /* background-color: rgb(234, 143, 255); */
+    background-size: cover;
     border-left: 1px solid white;
     border-right: 1px solid white;
     position: relative;
     box-shadow: 0 0 20px 2px rgb(198, 198, 198);
     padding-bottom: 60px;
     box-sizing: border-box;
+}
+
+@media screen and (max-width:1074px) {
+    .cantainer {
+        width: 100%;
+    }
+
 }
 
 .cantainer>.chats {
@@ -55,7 +61,7 @@ background-size: cover;
     border-bottom: 1px solid white;
     border-left: 1px solid white;
     border-radius: 50px 0 0 0;
-    
+
 }
 
 .cantainer>.chats>div.message:nth-child(even) {
