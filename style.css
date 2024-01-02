@@ -5,7 +5,7 @@ body {
 }
 
 .cantainer {
-    width: 40%;
+    width: 50%;
     height: 100vh;
     margin: auto;
     background-image: url(img/back.webp);
@@ -13,24 +13,38 @@ body {
     background-size: cover;
     border-left: 1px solid white;
     border-right: 1px solid white;
-    position: relative;
     box-shadow: 0 0 20px 2px rgb(198, 198, 198);
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     box-sizing: border-box;
 }
 
-@media screen and (max-width:1074px) {
+.cantainer>.typeing {
+    height: 80px;
+    width: 49.9%;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(129, 70, 255, 0.435);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (max-width:900px) {
     .cantainer {
-        width: 100%;
+        width: 95%;
     }
 
+    .cantainer>.typeing {
+        width: 94.7%;
+
+    }
 }
 
 .cantainer>.chats {
     height: 100%;
     font-weight: bold;
     font-size: 15px;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,18 +96,6 @@ body {
     border-right: 1px solid white;
 }
 
-
-.cantainer>.typeing {
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(129, 70, 255, 0.435);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
 
 .cantainer>.typeing>#Question {
     height: 40px;
