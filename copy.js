@@ -2,10 +2,7 @@
 let language = {
     english: [
         { character: "Q" },
-        {
-            character: "W",
-            "what is your name": "javad promax",
-        },
+        { character: "W" },
         { character: "E" },
         { character: "R" },
         { character: "T" },
@@ -21,8 +18,8 @@ let language = {
         { character: "G" },
         {
             character: "H",
-            HELLO: "hii",
-            "HOW ARE YOU": "i'm fine,thanks",
+            hello: "hii",
+            howareyou: "i'm fine,thanks"
         },
         { character: "J" },
         { character: "K" },
@@ -34,8 +31,42 @@ let language = {
         { character: "B" },
         { character: "N" },
         { character: "M" }]
-}
 
+,
+farsi: [
+    { character: "ض" },
+    { character: "ص" },
+    { character: "ث" },
+    { character: "ق" },
+    { character: "ف" },
+    { character: "غ" },
+    { character: "ع" },
+    { character: "ه" },
+    { character: "خ" },
+    { character: "ح" },
+    { character: "ج" },
+    { character: "چ" },
+    { character: "پ" },
+    { character: "ش" },
+    { character: "س" },
+    { character: "ی" },
+    { character: "ب" },
+    { character: "ل" },
+    { character: "ا" },
+    { character: "ت" },
+    { character: "ن" },
+    { character: "م" },
+    { character: "ک" },
+    { character: "گ" },
+    { character: "ظ" },
+    { character: "ط" },
+    { character: "ز" },
+    { character: "ر" },
+    { character: "ذ" },
+    { character: "د" },
+    { character: "ئ" },
+    { character: "و" }]
+}
 
 function getQuestion() {
     let question = document.getElementById("Question").value;
@@ -51,15 +82,12 @@ function response(question) {
     question = question.toUpperCase();
 
     for (let i = 0; i < 23; i++) {
-        if (language.english[i].character == question[0]) {
-            result = i
-            // language.english[i].hasOwnProperty(question)
-
-            if (question in language.english[i]) {
-                answer = "";
-            }
+        if (language.english[i].character == question) {
+            answer = "yes";
         }
     }
+
+
     return answer;
 }
 
@@ -69,4 +97,3 @@ function show_response() {
     let text2 = document.getElementById("msg2").innerHTML = response(question);
     document.getElementById("Question").value = "";
 }
-
